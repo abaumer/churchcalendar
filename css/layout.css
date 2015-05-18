@@ -1,0 +1,332 @@
+/* colors: http://www.colourlovers.com/palette/443995/i_demand_a_pancake */
+/*
+@green: 		#9DE0AD;
+@yellow: 		#E5FCC2;
+@midgreen:	#45ADA8;
+@grey:      #594F4F; */
+/* seasons 
+@advent:		#7D4F6D;
+@christmas:	#C7604C;
+@epiphany:	#584A5E; 
+@ordinary: 	#45ADA8;
+@lent:			#444;
+@easter: 		#E5FCC2;
+@pentecost: #9DE0AD; */
+/* seasons 2 
+@advent:    #7D4F6D;
+@christmas: #F2F26F;
+@epiphany:  #FFFFD5; 
+@ordinary:  #9DE0AD;
+@lent:      #444;
+@easter:    #F2F26F;
+@pentecost: #C7604C; */
+/* seasons 3 */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background: url('subtle_carbon.png') repeat center center #594f4f;
+  padding: 0 !important;
+  /* The html and body elements cannot have any padding or margin. */
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  .wrap {
+    padding: 20px;
+    padding-left: 20px;
+  }
+}
+/* Wrapper for page content to push down footer */
+.page {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto ;
+}
+.wrap {
+  width: 100%;
+}
+#push {
+  height: 80px;
+}
+/* Blocks Idea */
+.calBlocks {
+  background: #444;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  display: block;
+  clear: both;
+  box-shadow: 0 1px 20px #222;
+  z-index: 20;
+  overflow: visible;
+}
+.calBlocks div,
+.calBlocks a {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 12.5%;
+  height: 40px;
+  background: #982349;
+  opacity: .5;
+  color: #bbb;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 36pt;
+}
+.calBlocks div.current,
+.calBlocks a.current {
+  opacity: 1;
+  color: #fff;
+  font-size: 1.5em;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.calBlocks div:hover,
+.calBlocks a:hover {
+  font-size: 1.8em;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (min-width: 600px) {
+  .calBlocks .calBlocks {
+    height: 50px;
+  }
+  .calBlocks .calBlocks div {
+    height: 50px;
+    line-height: 60pt;
+    font-size: 1.75rem;
+  }
+}
+.calBlocks .s1a {
+  background: #454056;
+  color: #bbb;
+}
+.calBlocks .s2c {
+  background: #e9b955;
+  color: #444444;
+}
+.calBlocks .s3e {
+  background: #ffffd5;
+  color: #444444;
+}
+.calBlocks .s4o {
+  background: #87a999;
+  color: #444444;
+}
+.calBlocks .s5l {
+  background: #444444;
+  color: #bbb;
+}
+.calBlocks .s6e {
+  background: #e9b955;
+  color: #444444;
+}
+.calBlocks .s7p {
+  background: #ef5a6e;
+  color: #444444;
+}
+.calBlocks .s8o {
+  background: #87a999;
+  color: #444444;
+}
+/* Season Chart */
+#seasonsChart {
+  width: 280px;
+  height: 280px;
+}
+#seasonsChart.move-left {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  #seasonsChart {
+    width: 400px;
+    height: 400px;
+  }
+}
+/* Tweak Seasons Chart to center */
+#theseason[data-season='1'] #seasonsChart {
+  margin-left: 40px;
+}
+#theseason[data-season='2'] #seasonsChart {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+#theseason[data-season='3'] #seasonsChart {
+  margin-top: 40px;
+}
+#theseason[data-season='4'] #seasonsChart {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#theseason[data-season='5'] #seasonsChart {
+  margin-right: 10px;
+}
+#theseason[data-season='6'] #seasonsChart {
+  margin-bottom: 10px;
+}
+#theseason[data-season='7'] #seasonsChart {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+#theseason[data-season='8'] #seasonsChart {
+  margin-left: 40px;
+}
+.season {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background: rgba(89, 79, 79, 0.45);
+}
+.season h1 {
+  color: #e9b955;
+  font-weight: 100;
+  font-size: 2.5rem;
+  line-height: .9;
+  text-align: center;
+  padding-top: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.season h1 small {
+  color: #87a999;
+  font-weight: 400;
+  font-size: .4em;
+  line-height: .6em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+@media (min-width: 344px) {
+  .season {
+    padding-top: 4rem;
+  }
+  .season h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .season h1 {
+    font-size: 6rem;
+    line-height: .6;
+  }
+  .season h1 small {
+    font-size: .3em;
+  }
+}
+.share {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #87a999;
+  border-bottom: 1px solid #87a999;
+}
+.share .shareblocks {
+  width: 100%;
+  position: relative;
+  display: table;
+}
+.share .shareblocks a {
+  padding: 20px;
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.share .shareblocks a.b-right {
+  border-right: 1px dotted #87a999;
+}
+@media (min-width: 480px) {
+  .share {
+    background: #fff;
+  }
+  .share .shareblocks {
+    text-align: right;
+    border-left: 1px dotted #87a999;
+  }
+  .share .shareblocks a {
+    max-width: 100px;
+    float: none;
+    display: inline-block;
+  }
+  .share .shareblocks a img {
+    opacity: .5;
+  }
+  .share .shareblocks a:hover,
+  .share .shareblocks a:focus {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .share .shareblocks a:hover img,
+  .share .shareblocks a:focus img {
+    opacity: 1;
+  }
+}
+.content {
+  background: #fff;
+  text-align: left;
+  padding: 2rem 1rem;
+  color: #444;
+}
+.content.dark {
+  background: rgba(89, 79, 79, 0.65);
+  color: #9db277;
+}
+.content.dark p {
+  color: #ccc;
+}
+.content.dark p i {
+  color: #dedede;
+}
+.content section {
+  margin: 0 auto;
+  padding-top: 40pt;
+}
+.content section.focus {
+  background: yellow;
+}
+.content section p {
+  color: #222;
+}
+.content section p i {
+  color: #547980;
+}
+@media (min-width: 768px) {
+  .content {
+    padding: 2rem 2rem;
+  }
+  .content section {
+    max-width: 80%;
+  }
+}
+p {
+  color: #547980;
+  font-size: 1rem;
+  font-weight: 400;
+}
+footer {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12pt;
+}
+footer .credit {
+  font-size: 1rem;
+}
+footer .right {
+  text-align: right;
+}
+footer .github {
+  background-image: url('../img/github_icon.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-left: 32px;
+}
