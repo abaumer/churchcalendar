@@ -50,6 +50,10 @@
 
     &.active {
       border-bottom: 3px solid @ordinary;
+
+      a {
+        font-weight: bold;
+      }
     }
   }
   .nav > li > a {
@@ -64,12 +68,13 @@
     font-size: 8px;
     text-align: center;
     line-height: 36pt;
+    transition: all .3s ease;
     
-    &.current {
-      -webkit-transition: all 200ms ease;
-      transition: all 200ms ease;
-      // border-bottom: 3px solid @ordinary;
-    }
+    // &.current {
+    //   -webkit-transition: all 200ms ease;
+    //   transition: all 200ms ease;
+    //   // border-bottom: 3px solid @ordinary;
+    // }
     &:hover {
       color: @ordinary;
       text-decoration: none;

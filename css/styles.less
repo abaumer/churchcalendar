@@ -156,6 +156,8 @@
 @media (min-width: @screen-sm) {
   .season {
     height: 100%;
+    padding: 40px 20px 20px;
+    
     p {
       margin: 0 0 16px;
       font-size: 14px;
@@ -197,29 +199,42 @@
 
   section {
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 0px;
+    padding-bottom: 40px;
 
     &.focus {
       background: yellow;
     }
 
     p {
-      color: #222;
+      color: @black;
+      margin-bottom: 20px;
 
       i {
-        color: #547980;
+        color: inherit;
       }
+    }
+
+    h2 {
+      font-weight: 100;
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 14px;
+      margin: 16px 0 20px;
     }
   }
 }
 @media (min-width: 768px) {
   .content {
-    padding: 2rem 2rem;
+    padding: 20px;
     position: relative;
 
     section {
       max-width: 80%;
       height: 100vh;
+      padding-top: 80px;
+      padding-bottom: 0;
 
       h2 {
         font-size: 5rem;
@@ -227,6 +242,9 @@
         display: inline-block;
         border-top: 2px solid @black;
         padding-top: 20px;
+      }
+      h3 {
+        margin-top: 10px;
       }
     }
   }
