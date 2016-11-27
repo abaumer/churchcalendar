@@ -1,0 +1,87 @@
+
+/* Blocks Idea */
+.calBlocks {
+  background: #444;
+  width: 100%;
+  position: relative;
+  // top: 0;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  display: block;
+  clear: both;
+  box-shadow: 0 1px 20px #222;
+  z-index: 20;
+  overflow: visible;
+
+  div, a {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 12.5%;
+    height: 40px;
+    background: #982349;
+    opacity: .5;
+    color: #bbb;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 36pt;
+    
+    &.current {
+      opacity: 1;
+      color: #fff;
+      font-size: 1.5em;
+      -webkit-transition: all 200ms ease;
+      transition: all 200ms ease;
+    }
+    &:hover {
+      font-size: 1.8em;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  @media (min-width: 600px) {
+    .calBlocks {
+      height: 50px;
+
+      div {
+        height: 50px;
+        line-height: 60pt;
+        font-size: 1.75rem;
+      }
+    }
+  }
+  .s1a {
+    background: @advent;
+    color: #bbb;
+  }
+  .s2c {
+    background: @christmas;
+    color: @dkgrey;
+  }
+  .s3e {
+    background: @epiphany;
+    color: @dkgrey;
+  }
+  .s4o {
+    background: @ordinary;
+    color: @dkgrey;
+  }
+  .s5l {
+    background: @lent;
+    color: #bbb;
+  }
+  .s6e {
+    background: @easter;
+    color: @dkgrey;
+  }
+  .s7p {
+    background: @pentecost;
+    color: @dkgrey;
+  }
+  .s8o {
+    background: @ordinary;
+    color: @dkgrey;
+  }
+}

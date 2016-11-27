@@ -33,9 +33,9 @@
     </script>
 
     <!-- CSS -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,100' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Javascript
@@ -67,32 +67,47 @@
 
     <!-- Part 1: Wrap all page content here -->
     <div class="page">
-
-      <div class="calBlocks">
-        <a id="block1" class="s1a" href="#advent">A</a>
-        <a id="block2" class="s2c" href="#christmas">C</a>
-        <a id="block3" class="s3e" href="#epiphany">E</a>
-        <a id="block4" class="s4o" href="#ordinary1">OT</a>
-        <a id="block5" class="s5l" href="#lent">L</a>
-        <a id="block6" class="s6e" href="#easter">E</a>
-        <a id="block7" class="s7p" href="#pentecost">P</a>
-        <a id="block8" class="s8o" href="#ordinary2">OT</a>
-      </div>
-
+      <header class="sitetitle">
+        <div class="row">
+          <div class="col-xs-4">
+            <h2>1cal</h2>
+          </div>
+          <div class="col-xs-8 text-right">
+            <ul class="list-unstyled list-inline">
+              <li>calendar</li>
+              <li>about</li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <div id="theseason" class="wrap season" data-season="<?php echo get_seasons('current', 3, $this_year); ?>">
         <div class="container">
           <div class="row">
             <div class="span12">
               <div id="chartBox"></div>
-              <h1 itemprop="text"><span class="name"><?php echo get_seasons('current', 2, $this_year); ?></span><br/>
+              <div class="seasontitle">
+                <p>It is the season of</p>
+                <h1 itemprop="text"><span class="name"><?php echo get_seasons('current', 2, $this_year); ?></span><br/>
                 <small><span class="startdate"><?php echo date("M d, Y", strtotime(get_seasons('current', 0, $this_year))); ?></span> - <span class="enddate"><?php echo date("M d, Y", strtotime(get_seasons('current', 1, $this_year))); ?></span></small></h1>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
+      
+      <div class="calBlocks">
+        <a id="block1" class="s1a" href="#advent">Advent</a>
+        <a id="block2" class="s2c" href="#christmas">Christmas</a>
+        <a id="block3" class="s3e" href="#epiphany">Epiphany</a>
+        <a id="block4" class="s4o" href="#ordinary1">Ordinary</a>
+        <a id="block5" class="s5l" href="#lent">Lent</a>
+        <a id="block6" class="s6e" href="#easter">Easter</a>
+        <a id="block7" class="s7p" href="#pentecost">Pentecost</a>
+        <a id="block8" class="s8o" href="#ordinary2">Ordinary</a>
+      </div>
 
-      <div class="wrap share">
+      <!-- <div class="wrap share">
           <div class="shareblocks">
             <a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2F1cal.cc&media=http%3A%2F%2F1cal.cc%2Fimg%2F1cal.jpg&description=One%20Church%20Calendar" data-pin-do="buttonPin" data-pin-config="none" class="b-right"><img src="img/_40-pinterest.png" alt="Like" /></a>            
             <a href="https://plus.google.com/share?url=http://1cal.cc" class="b-right"><img src="img/_40-google.png" alt="Like" /></a>
@@ -100,7 +115,7 @@
             <a href="https://twitter.com/share?text=We+are+in+<?php echo str_replace(" ", "+", get_seasons('current', 2, $this_year)); ?>.+-+via+@abaumer&amp;hashtags=1Cal&amp;url=http://1cal.cc" target="_blank" ><img src="img/_40-twitter.png" alt="Tweet" /></a>
 
           </div>
-      </div>
+      </div> -->
 
       <div class="wrap content">
         <section id="advent">
