@@ -62,7 +62,7 @@
     padding: 0;
     // width: 12.5%;
     height: 40px;
-    background: #white;
+    background: @white;
     opacity: 1;
     color: @black;
     font-size: 8px;
@@ -76,9 +76,13 @@
     //   // border-bottom: 3px solid @ordinary;
     // }
     &:hover {
-      color: @ordinary;
+      background: @white;
       text-decoration: none;
       cursor: pointer;
+    }
+    &:focus,
+    &:active {
+      background: @white;
     }
   }
   @media (min-width: 600px) {
