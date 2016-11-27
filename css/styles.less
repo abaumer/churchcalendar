@@ -28,6 +28,16 @@
       font-size: 12px;
       font-weight: 100;
       vertical-align: top;
+
+
+      a {
+        color: @white;
+        
+        &:hover,
+        &:focus {
+          color: @ordinary;
+        }
+      }
     }
   }
 }
@@ -102,6 +112,13 @@
     margin-top: -20px;
     display: block;
   }
+
+  @media (min-width: @screen-sm) {
+    .seasontitle {
+      padding: 0 55px 100px;
+    }
+  }
+
   p {
     color: @epiphany;
     margin: 0 0 9px;
@@ -125,8 +142,6 @@
 		font-weight: 400;
 		font-size: .4em;
 		line-height: .6em;
-		text-transform: uppercase;
-		text-shadow: none;
 	}
 }
 @media (min-width: 344px) {
@@ -138,10 +153,15 @@
     }
   }
 }
-@media (min-width: 768px) {
+@media (min-width: @screen-sm) {
   .season {
+    height: 100%;
+    p {
+      margin: 0 0 16px;
+      font-size: 14px;
+    }
     h1 {
-      font-size: 6rem;
+      font-size: 5rem;
       line-height: .6;
     }
     h1 small{
@@ -150,72 +170,21 @@
   }
 }
 
-.share {
-  padding: 0;
-  background: rgba(255,255,255,.9);
-  border-top: 1px solid @green;
-  border-bottom: 1px solid @green;
-
-  .shareblocks {
-    width: 100%;
-    position: relative;
-    display: table;
-
-    a {
-      padding: 20px;
-      display: block;
-      float: left;
-      width: 25%;
-      text-align: center;
-
-      &:hover, &:focus {
-
-      }
-
-      &.b-right {
-        border-right: 1px dotted @green;
-      }
-    }
-  }
-}
-@media (min-width: 480px) {
-  .share {
-    background: #fff;
-
-    .shareblocks {
-      text-align: right;
-      border-left: 1px dotted @green;
-
-      a {
-        max-width: 100px;
-        float: none;
-        display: inline-block;
-
-        img {
-          opacity: .5;
-        }
-
-        &:hover, &:focus {
-          background: rgba(0,0,0,.1);
-
-          img {
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-}
 
 .content {
   background: #fff;
   text-align: left;
-  padding: 2rem 1rem;
-  color: #444;
+  padding: 20px 20px 80px;
+  color: @black;
 
   &.dark {
-    background: rgba(89,79,79,.65);
+    background: @black;
     color: @midgreen;
+    padding-top: 20px !important;
+
+    section {
+      padding-top: 0 !important;
+    }
 
     p {
       color: #ccc;
@@ -228,7 +197,7 @@
 
   section {
     margin: 0 auto;
-    padding-top: 40pt;
+    padding-top: 80px;
 
     &.focus {
       background: yellow;
@@ -246,10 +215,26 @@
 @media (min-width: 768px) {
   .content {
     padding: 2rem 2rem;
+    position: relative;
 
     section {
       max-width: 80%;
+      height: 100vh;
+
+      h2 {
+        font-size: 5rem;
+        font-weight: 100;
+        display: inline-block;
+        border-top: 2px solid @black;
+        padding-top: 20px;
+      }
     }
+  }
+}
+
+body.cal-stuck {
+  .content {
+    padding-top: 80px;
   }
 }
 
@@ -260,7 +245,7 @@ p {
 }
 footer {
 	position: relative;
-	background: rgba(0,0,0,.4);
+	background: black;
 	padding: 12pt;
 
 	.credit {

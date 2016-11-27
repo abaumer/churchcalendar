@@ -1,42 +1,77 @@
+#marker {
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
 
 /* Blocks Idea */
 .calBlocks {
-  background: #444;
+  background: @white;
   width: 100%;
   position: relative;
   // top: 0;
   margin: 0;
-  padding: 0;
-  height: 40px;
+  padding: 0 20px;
+  height: 60px;
   display: block;
   clear: both;
-  box-shadow: 0 1px 20px #222;
+  box-shadow: none;
   z-index: 20;
   overflow: visible;
 
-  div, a {
+  &.stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  @media (min-width: @screen-sm) {
+    position: fixed;
+    left: 50%;
+    width: 50%;
+    
+    &.stuck {
+      position: fixed;
+      left: 50%;
+      width: 50%;
+    }
+  }
+  
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav > li {
+    padding: 0;
+    flex-grow: 1;
+
+    &.active {
+      border-bottom: 3px solid @ordinary;
+    }
+  }
+  .nav > li > a {
     display: block;
-    float: left;
     margin: 0;
     padding: 0;
-    width: 12.5%;
+    // width: 12.5%;
     height: 40px;
-    background: #982349;
-    opacity: .5;
-    color: #bbb;
-    font-size: 1rem;
+    background: #white;
+    opacity: 1;
+    color: @black;
+    font-size: 8px;
     text-align: center;
     line-height: 36pt;
     
     &.current {
-      opacity: 1;
-      color: #fff;
-      font-size: 1.5em;
       -webkit-transition: all 200ms ease;
       transition: all 200ms ease;
+      // border-bottom: 3px solid @ordinary;
     }
     &:hover {
-      font-size: 1.8em;
+      color: @ordinary;
       text-decoration: none;
       cursor: pointer;
     }
@@ -52,36 +87,36 @@
       }
     }
   }
-  .s1a {
-    background: @advent;
-    color: #bbb;
-  }
-  .s2c {
-    background: @christmas;
-    color: @dkgrey;
-  }
-  .s3e {
-    background: @epiphany;
-    color: @dkgrey;
-  }
-  .s4o {
-    background: @ordinary;
-    color: @dkgrey;
-  }
-  .s5l {
-    background: @lent;
-    color: #bbb;
-  }
-  .s6e {
-    background: @easter;
-    color: @dkgrey;
-  }
-  .s7p {
-    background: @pentecost;
-    color: @dkgrey;
-  }
-  .s8o {
-    background: @ordinary;
-    color: @dkgrey;
-  }
+  // .s1a {
+  //   background: @advent;
+  //   color: #bbb;
+  // }
+  // .s2c {
+  //   background: @christmas;
+  //   color: @dkgrey;
+  // }
+  // .s3e {
+  //   background: @epiphany;
+  //   color: @dkgrey;
+  // }
+  // .s4o {
+  //   background: @ordinary;
+  //   color: @dkgrey;
+  // }
+  // .s5l {
+  //   background: @lent;
+  //   color: #bbb;
+  // }
+  // .s6e {
+  //   background: @easter;
+  //   color: @dkgrey;
+  // }
+  // .s7p {
+  //   background: @pentecost;
+  //   color: @dkgrey;
+  // }
+  // .s8o {
+  //   background: @ordinary;
+  //   color: @dkgrey;
+  // }
 }

@@ -35,3 +35,41 @@ body {
 #push {
   height: 80px;
 }
+
+.container-fluid {
+  padding: 0;
+
+  > .row {
+    margin: 0;
+    padding: 0;
+    display: block;
+
+    > .col-sm-6 {
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @screen-sm) {
+ .container-fluid {
+    padding: 0;
+
+    > .row {
+      height: 100%;
+      overflow: hidden;
+
+      > .col-sm-6.left-side {
+        height: 100%;
+        overflow-y: scroll;
+        position: fixed;
+      }
+      > .col-sm-6.right-side {
+        position: relative;
+        width: 50%;
+        left: 50%;
+      }
+    }
+  } 
+}
